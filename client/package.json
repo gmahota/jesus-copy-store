@@ -1,0 +1,92 @@
+{
+  "name": "d-board",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "type-check": "tsc --pretty --noEmit",
+    "lint": "eslint . --ext ts --ext tsx --ext js --cache --fix --max-warnings 0",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.css": [
+      "prettier --write --parser css"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
+    ],
+    "cypress/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix --max-warnings 0",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.6.1",
+    "@heroicons/react": "^1.0.6",
+    "@popperjs/core": "^2.11.5",
+    "@reduxjs/toolkit": "^1.8.1",
+    "@types/accounting": "^0.4.2",
+    "@types/faker": "^5.5.9",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-star-ratings": "^2.3.0",
+    "@types/recharts": "^1.8.23",
+    "accounting": "^0.4.1",
+    "axios": "^0.27.2",
+    "clsx": "^1.1.1",
+    "depcheck": "^1.4.3",
+    "dpdm": "^3.9.0",
+    "faker": "^5.5.3",
+    "moment": "^2.29.3",
+    "next": "12.1.6",
+    "nprogress": "^0.2.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-hook-form": "^7.31.1",
+    "react-hotkeys-hook": "^3.4.6",
+    "react-icons": "^4.3.1",
+    "react-popper": "^2.3.0",
+    "react-redux": "^8.0.1",
+    "react-select": "^5.3.2",
+    "react-star-ratings": "^2.3.0",
+    "react-switch": "^6.0.0",
+    "recharts": "^2.1.9",
+    "swr": "^1.3.0"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@next/eslint-plugin-next": "^12.1.6",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.1",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "autoprefixer": "^10.4.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
+    "postcss": "^8.4.13",
+    "postcss-import": "^14.1.0",
+    "postcss-nested": "^5.0.6",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.4"
+  }
+}
